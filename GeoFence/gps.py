@@ -11,6 +11,7 @@ def gps():
 
 
         while True:
+                gps.update()
                 if not gps.has_fix:
                     # Try again if we don't have a fix yet.
                     print("Waiting for fix...")
