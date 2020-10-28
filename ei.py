@@ -5,12 +5,12 @@ import json
 #---Get Sample ID---#
 
 def getSampleId():
-    url = "https://studio.edgeimpulse.com/v1/api/8694/raw-data"
+    url = "https://studio.edgeimpulse.com/v1/api/Project-ID/raw-data"
     querystring = {"category":"testing"}
     headers = {
-        "cookie": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcyNTMsImlhdCI6MTYwMTc4Nzk4OSwiZXhwIjoxNjA0Mzc5OTg5fQ.UxaxCHyNMZ9VqmB29xN9k3b9UKDGB3R5-1UejqQS_L8",
+        "cookie": "jwt=JWT",
         "accept": "application/json",
-        "x-api-key": "ei_737db4431dbe56578727949bf3064e9c61ddac35a66937eb319ae87536581c1c"
+        "x-api-key": "API KEY"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     sample_json = json.loads(response.text)
@@ -22,11 +22,11 @@ def getSampleId():
 #---Classify Sample---#
 
 def classifySample(sample_id):
-    url = "https://studio.edgeimpulse.com/v1/api/8694/classify/" + str(sample_id)
+    url = "https://studio.edgeimpulse.com/v1/api/Project-ID/classify/" + str(sample_id)
     headers = {
-        "cookie": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcyNTMsImlhdCI6MTYwMTc4Nzk4OSwiZXhwIjoxNjA0Mzc5OTg5fQ.UxaxCHyNMZ9VqmB29xN9k3b9UKDGB3R5-1UejqQS_L8",
+        "cookie": "jwt=JWT",
         "accept": "application/json",
-        "x-api-key": "ei_737db4431dbe56578727949bf3064e9c61ddac35a66937eb319ae87536581c1c"
+        "x-api-key": "API KEY"
     }
 
     response = requests.request("POST", url, headers=headers)
@@ -54,11 +54,11 @@ def classifySample(sample_id):
 #---Delete Sample---#
 
 def deleteSample(sample_id):
-    url = "https://studio.edgeimpulse.com/v1/api/8694/raw-data/" + str(sample_id)
+    url = "https://studio.edgeimpulse.com/v1/api/Project-ID/raw-data/" + str(sample_id)
     headers = {
-        "cookie": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjcyNTMsImlhdCI6MTYwMTc4Nzk4OSwiZXhwIjoxNjA0Mzc5OTg5fQ.UxaxCHyNMZ9VqmB29xN9k3b9UKDGB3R5-1UejqQS_L8",
+        "cookie": "jwt=JWT",
         "accept": "application/json",
-        "x-api-key": "ei_737db4431dbe56578727949bf3064e9c61ddac35a66937eb319ae87536581c1c"
+        "x-api-key": "API KEY"
     }
 
     response = requests.request("DELETE", url, headers=headers)

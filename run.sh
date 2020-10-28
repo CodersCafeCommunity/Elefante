@@ -1,30 +1,10 @@
 #!/bin/bash
-var = 0
 trap ctrl_c INT
 
 function ctrl_c() {
 	clear
-        exit
-}
-
-if ! [ -x "$(command -v figlet)" ]; then
-  echo 'Error: figlet is not installed.'
-  echo 'Installing figlet'
-  sudo apt-get install figlet
-  clear
-fi
-if ! [ -x "$(command -v lolcat)" ]; then
-  echo 'Error: lolcat is not installed.'
-  echo 'Installing lolcat'
-  sudo apt-get install lolcat
-  clear
-fi
-if ! [ -x "$(command -v gnome-terminal)" ]; then
-  echo 'Error: GNOME terminal is not installed.'
-  echo 'Instal and try again !'
   exit
-fi
-
+}
 clear
 echo
 figlet -w 180 -c -f Fonts/3d.flf -x  "elefante" | lolcat

@@ -3,19 +3,19 @@ import sys
 import json
 import time
 import threading
-#import gps
+import gps
 import ei
 from iotconnect import IoTConnectSDK
 from datetime import datetime
 
 env = "Avnet"
-uniqueId = "RPI002"
-cpId = "ffded10fc1f141169b72739b0ed7835c"
+uniqueId = "Device ID"
+cpId = "Your Company ID"
 interval = 60
 
 tProcess = None
 dataArray = []
-#gps = gps.gps()
+gps = gps.gps()
 
 def callbackMessage(msg):
     if msg:
