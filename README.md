@@ -8,7 +8,11 @@
  ```bash
  cd Elefante
  ```
- 3. Run the `run.sh` file using
+ 3. For once run the `install.sh` file, which will install all the dependencies.
+ ```bash
+ chmod +x install.sh && ./install.sh
+ ```
+ 4. Run the `run.sh` file using
  ```bash
  chmod +x run.sh && ./run.sh
  ```
